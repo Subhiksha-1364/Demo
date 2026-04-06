@@ -1,0 +1,21 @@
+<template>
+
+    <lightning-card title="Donation Form">
+        <div class="slds-p-around_medium">
+            <lightning-input name="DonorName" label="Donor Name" onchange={handleChange}></lightning-input>
+            <lightning-input name="DonationAmount" label="Donation Amount" type="number"
+                onchange={handleChange}></lightning-input>
+            <lightning-input name="Email" label="Email" type="Email" onchange={handleChange}></lightning-input>
+            <lightning-input name="Phone" label="Phone Number" type="number" onchange={handleChange}></lightning-input>
+            <lightning-input name="Age" label="Age" type="number" onchange={handleChange}></lightning-input>
+            <lightning-input name="Address" label="Address" onchange={handleChange}></lightning-input>
+        </div>
+
+        <div class="'slds-p-around_medium">
+
+            <lightning-button label="Create Donation" onclick={createDonationHandler}></lightning-button>
+            <ightning-button  ></ightning-button>
+        </div>
+    </lightning-card>
+
+</template>

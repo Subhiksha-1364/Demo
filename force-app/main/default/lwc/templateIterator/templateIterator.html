@@ -1,0 +1,56 @@
+<template>
+
+
+    <lightning-card title="Top 5 LWC Concepts" >
+        <div class="card">
+
+        
+
+        <template iterator:it={concepts}>
+
+            <div key={it.value.id} >
+                <template if:true={it.first}>
+                    <div class=' slds-theme_shade slds-theme_alert-texture  slds-grid slds-p-around_medium topBox'>
+                        <strong class='slds-col slds-size_1-of-2 '>Topics </strong>
+                        <strong class='slds-col slds-size_1-of-2 '>Components</strong>
+                    </div>
+                </template>
+               
+                <div class='slds-grid slds-border_top slds-p-around_medium contbox'>
+                    <div class='slds-col slds-size_1-of-2 topic'>
+                         <p > {it.value.topic}</p>
+                    </div>
+
+                    <div class='slds-col  slds-size_1-of-2 cont'>
+                        <template for:each={it.value.component} for:item='c'>
+
+                             <div key={c}>
+
+                                 <p> {c}</p>
+
+                             </div>
+
+
+                        </template>
+                       
+                    </div>
+                </div>
+
+                 <template if:true={it.last}>
+                    <div class="slds-p-around-medium  slds-border_top slds-p-around_medium lstdiv">
+                   <strong> <a href="https://www.ajskilldevelopment.com/">© ajskillevelopment.com</a></strong>
+                    </div>
+                </template>
+            </div>
+
+
+        </template>
+        </div>
+    </lightning-card>
+
+
+
+
+
+
+</template>

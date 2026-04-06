@@ -1,0 +1,41 @@
+<template>
+
+    <lightning-card title='Metadata Info'>
+
+        <div class='slds-p-around_medium'>
+
+
+            Field Count : { FieldCount } <br />
+            Custom Field Count : {customCount} <br>
+            Required Fields : {requiredCount}
+
+
+
+            <template iterator:it={fieldArray}>
+
+                <div key={it.value}>
+
+                    <template if:true={it.first}>
+                        <strong>Fields </strong>
+                    </template>
+
+                </div>
+            </template>
+
+            <template for:each={fieldArray} for:item='field'>
+                <div key={field}>
+
+                    {field}
+
+
+                </div>
+            </template>
+
+
+
+
+        </div>
+
+    </lightning-card>
+
+</template>

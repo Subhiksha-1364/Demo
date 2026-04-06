@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "c:/Users/HP/OneDrive/Desktop/LWC/LWC Org"
+    }
+  ],
+  "settings": {
+    "eslint.workingDirectories": [
+      "c:/Users/HP/OneDrive/Desktop/LWC/LWC Org"
+    ],
+    "eslint.validate": [
+      "javascript",
+      "typescript"
+    ],
+    "eslint.options": {
+      "overrideConfigFile": "c:\\Users\\HP\\OneDrive\\Desktop\\LWC\\LWC Org\\.eslintrc.json"
+    }
+  }
+}

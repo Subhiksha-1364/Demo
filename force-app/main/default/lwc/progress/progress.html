@@ -1,0 +1,41 @@
+<template>
+
+    <lightning-card label='Progress'>
+
+        <div class='slds-m-around_medium'>
+            <div class="slds-grid">
+                
+              <lightning-button label='Start' class='slds-col' variant='success' onclick={handleStart}></lightning-button>
+              <lightning-button label='Stop'  class='slds-col' variant='destructive' onclick={handleStop}></lightning-button>
+              <lightning-button label='Reset' class='slds-col' variant='brand' onclick={handleReset}></lightning-button>
+            </div>
+
+            <c-child-progress lwc:ref='child'></c-child-progress>
+
+        </div>
+
+
+
+
+    </lightning-card>
+
+     <lightning-card label='Timer'>
+
+        <div class='slds-m-around_medium'>
+            <div class="slds-grid">
+                
+              <lightning-button label='Start' class='slds-col' variant='success' onclick={handleStartTime}></lightning-button>
+              <lightning-button label='Stop'  class='slds-col' variant='destructive' onclick={handleStopTime}></lightning-button>
+              <lightning-button label='Reset' class='slds-col' variant='brand' onclick={handleResetTime}></lightning-button>
+            </div>
+
+            <c-child-timer lwc:ref='timer'></c-child-timer>
+
+        </div>
+
+
+
+
+    </lightning-card>
+
+</template>

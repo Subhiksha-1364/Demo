@@ -1,0 +1,29 @@
+.italic
+{
+    font-style: italic;
+}
+
+.t
+{
+    font-size: 1000 px;
+    text-align: center;
+}
+.bold
+{
+    font-weight: bold;
+    
+}
+.bgcolorGreen
+{
+    background-color: green;
+    color: white;
+}
+.Red
+{
+    color: red;
+} 
+
+.big
+{
+    font-size: xx-large;
+}

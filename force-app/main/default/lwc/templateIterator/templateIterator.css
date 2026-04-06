@@ -1,0 +1,27 @@
+.lstdiv
+{
+    text-align: center;
+
+}
+.cont
+{
+    text-align: left;
+    color: blueviolet;
+    font-weight: bold;
+}
+.topic
+{
+   color: red;
+   font-weight: bold;
+ }
+ .topBox
+ {
+    font-weight: bold;
+    font-size: large;
+ }
+.card
+{
+    border-color: burlywood;
+    border-radius: 10px;
+    border-style: double;
+}

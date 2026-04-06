@@ -1,0 +1,37 @@
+<template>
+
+    <lightning-card title="'Show Vendor Purchases">
+
+        <div class="'slds-p-around-medium">
+
+            <lightning-combobox name="vendor" label="Select Vendor" placeholder="Choose a Vendor"
+                options={vendorOptions} value={selectedVendorId} onchange={handleVendorChange}></lightning-combobox>
+
+        </div>
+
+        <template if:true={showPurchases}>
+            <div class="'slds-p-around-medium">
+                <lightning-datatable key-field="Id" data={purchases} columns={columns}
+                    hide-checkbox-column=""></lightning-datatable>
+            </div>
+        </template>
+
+        <!--  No Data Message -->
+        <template if:false={showPurchases}>
+            <div class="slds-m-around_medium">
+                <p>No Purchase Orders found</p>
+            </div>
+        </template>
+
+       
+        <div class="slds-m-around_medium">
+            <p style="font-size:16px; font-weight:bold;">
+                Total Amount: ₹ {totalAmount}
+            </p>
+        </div>
+
+
+
+    </lightning-card>
+
+</template>
