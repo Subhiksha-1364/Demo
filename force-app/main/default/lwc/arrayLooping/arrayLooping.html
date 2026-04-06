@@ -1,0 +1,36 @@
+<template>
+
+    <lightning-card title="Array Looping">
+        <div class="slds-m-around_medium">
+
+            <template lwc:if={isArray}>
+ 
+                <template for:each={course} for:item="item">
+
+                    <div key={itemId}>
+                        {item}
+                    </div>
+                </template>
+
+            </template> 
+
+ 
+            <template lwc:else>
+                <b>Array is not defined</b>
+            </template> 
+
+        </div>
+
+        <div class="slds-m-around_medium">
+            <lightning-input type="text" label="Enter Course" onchange={handleCourse}></lightning-input>
+        </div>
+
+        <div class="slds-m-around_medium">
+            <lightning-button label="Add Course" onclick={handleClick}></lightning-button>
+        </div>
+
+
+
+    </lightning-card>
+
+</template>
