@@ -1,0 +1,8 @@
+.carousel-wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+lightning-carousel {
+    height: 500px;
+}

@@ -1,0 +1,28 @@
+<template>
+
+   
+    <lightning-card title='Pkayer1'>
+
+        <lightning-carousel>
+
+            
+           
+
+            <template for:each={child} for:item='player'>
+                
+
+                    <lightning-carousel-image  key = {player.name}  src={player.img} header={player.name} description={player.team}> </lightning-carousel-image>
+   
+
+            </template>
+            
+   
+
+        </lightning-carousel>
+
+
+    </lightning-card>
+
+    
+
+</template>

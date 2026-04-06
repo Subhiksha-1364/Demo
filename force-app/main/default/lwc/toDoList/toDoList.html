@@ -1,0 +1,45 @@
+<template>
+
+
+    <lightning-card title="To do list" icon-name="standard:account">
+
+        <template lwc:if={isList}>
+            <div class="slds-m-around_medium ifTask slds-p-around-medium ">
+                <template for:each={todoList} for:item='task'>
+                    <div key={task.taskId} class="slds-grid">
+                        <div class="slds-m-around_medium slds-col"> 
+                        {task.taskName} 
+                        </div>
+                        <div class="slds-m-around_medium slds-col">
+
+                        
+                        <lightning-button-icon icon-name="utility:delete" variant="container" onclick={handleDelete} name={task.taskId}></lightning-button-icon>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+        <template lwc:else>
+            <div class="slds-m-around-medium noTask slds-p-around-medium">
+                <p class="p">No Task to show</p>
+            </div>
+        </template>
+
+        <div class="slds-m-around_medium slds-border_top input">
+
+            <lightning-input type="text" value={taskName} label=" Task Name" placeholder="Enter your task" onchange={handleTask}></lightning-input>
+        </div>
+
+        <div class="slds-m-around_medium">
+
+            <lightning-button label="Add Task" variant='brand-outline' onclick={handleAdd}></lightning-button>
+        </div>
+
+
+
+    </lightning-card>
+
+
+
+</template>

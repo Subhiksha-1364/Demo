@@ -1,0 +1,42 @@
+body {
+    background: red;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper .calculator {
+    width: 260px;
+    background: #444;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.wrapper .display {
+    background: white;
+    height: 50px;
+    font-size: 22px;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.wrapper .buttonBox {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 8px;
+}
+
+.wrapper .buttonBox > button {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    background: #ddd;
+}
+
+.wrapper .buttonBox >button:hover {
+    background: #bbb;
+}

@@ -1,0 +1,92 @@
+<template>
+
+    <lightning-card title="My Profile">
+
+        <template lwc:if={hasDetail}>
+
+            <template lwc:if={NotEmpty}>
+
+                <template for:each={profile} for:item="detail" for:index='Index'>
+                    <div key={dIndex}>
+                        <div class='slds-p-around_medium'>
+                            First Name : {detail.firstName}
+                            <br>
+                            Last Name : {detail.lastName}
+                            <br>
+                            Age : {detail.Age}
+                            <br>Name : {detail.firstName } {detail.lastName}
+                            <br>Company : {detail.Company}
+                            <br>Degree : {detail.Degree}
+                            <br>QA Slot 1 : {detail.QASlot.QASlot1}
+                            <br>QA Slot 2 : {detail.QASlot.QASlot2}
+                        </div>
+
+                    </div>
+                </template>
+
+
+
+
+            </template>
+
+            
+        </template>
+        <template lwc:else>
+            <div class="slds-text-heading_medium slds-text-align_center">
+                No Data to Display
+            </div>
+            </template>
+
+        <!-- <div class="slds-p-around_medium">
+
+            First Name : {firstName}
+            <br>
+            Last Name : {lastName}
+            <br>
+            Age : {Age}
+            <br>Name : {name}
+            <br>Company : {Company}
+            <br>Degree : {Degree}
+            <br>QASlot 1 : {QASlot.QASlot1}
+            <br>QASlot 1 : {QASlot.QASlot2}
+
+        </div> -->
+        <div class="slds-p-around_medium">
+            <lightning-input type="text" label="First Name" placeholder='First Name'
+              value ={FName}  onchange={handleFirstName}></lightning-input>
+
+
+            <lightning-input type="text" label="Last Name" placeholder="Last Name" value ={LName}
+                onchange={handleLastName}></lightning-input>
+
+
+            <lightning-input type="number" label="Age" value ={Ages} placeholder="Age" onchange={handleAge}></lightning-input>
+
+
+            <lightning-input type="text" label="Company" value ={Comp} placeholder="Company"
+                onchange={handleCompany}></lightning-input>
+
+
+            <lightning-input type="text" label="Degree" value ={Deg} placeholder="Degree" onchange={handleDegree}></lightning-input>
+
+
+            <lightning-input type="text" label="QA 1" value ={QA1} placeholder="QA 1" onchange={handleQA1}></lightning-input>
+
+
+            <lightning-input type="text" label="QA 2" value ={QA2} placeholder="QA 2" onchange={handleQA2}></lightning-input>
+        </div>
+
+        <div class="slds-p-around_medium">
+            <lightning-button style="padding: 10px;" label="Add" onclick={handleAdd}></lightning-button>
+            <lightning-button style="padding: 10px;" label="Clear" onclick={handleClear}></lightning-button>
+            <lightning-button style="padding: 10px;" label="Display" onclick={handleDisplay}></lightning-button>
+        </div>
+
+
+
+
+    </lightning-card>
+
+
+
+</template>

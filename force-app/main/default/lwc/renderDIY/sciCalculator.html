@@ -1,0 +1,60 @@
+<template>
+
+	<div class='wrapper'>
+		<lightning-card title="Scientific Caculator">
+
+			<div class='calculator'>
+
+				<div class='display'>
+
+					{displayValue}
+
+				</div>
+
+			
+				<div class='buttonBox'>
+
+					<button onclick={handleClear}>C</button>
+					<button onclick={handleBackSpace}>⌫</button>
+					<button onclick={square}>x²</button>
+					<button onclick={cube}>x³</button>
+
+					<button onclick={sqrt}>√</button>
+					<button onclick={log}>log</button>
+					<button onclick={ln}>ln</button>
+					<button onclick={inverse}>1/x</button>
+
+					<button onclick={sin}>sin</button>
+					<button onclick={cos}>cos</button>
+					<button onclick={tan}>tan</button>
+					<button onclick={pi}>π</button>
+					<button data-value='**2' onclick={handleOperator}>2^</button>
+					<button data-value='%' onclick={handleOperator}>%</button>
+
+					<button data-value='+' onclick={handleOperator}>+</button>
+					<button data-value='-' onclick={handleOperator}>-</button>
+					<button data-value='/' onclick={handleOperator}>/</button>
+					<button data-value='*' onclick={handleOperator}>*</button>
+					<button data-value='1' onclick={handleNumber}>1</button>
+					<button data-value='2' onclick={handleNumber}>2</button>
+					<button data-value='3' onclick={handleNumber}>3</button>
+					<button data-value='4' onclick={handleNumber}>4</button>
+					<button data-value='5' onclick={handleNumber}>5</button>
+					<button data-value='6' onclick={handleNumber}>6</button>
+					<button data-value='7' onclick={handleNumber}>7</button>
+					<button data-value='8' onclick={handleNumber}>8</button>
+					<button data-value='9' onclick={handleNumber}>9</button>
+					<button data-value='0' onclick={handleNumber}>0</button>
+
+					<button onclick={result}>=</button>
+
+				</div>
+
+				<lightning-button label='Close' onclick={handleClick} class='slds-p-around_medium'></lightning-button>
+
+
+			</div>
+
+		</lightning-card>
+	</div>
+</template>

@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title='Top player'>
+        <div class="slds-p-around_medium">
+
+           <template if:true={topScore}>
+                <template for:each={topScore} for:item="player">
+                    <div key={player.name} class="slds-m-bottom_small">
+                        <p><b>Name:</b> {player.name}</p>
+                        <p><b>Team:</b> {player.team}</p>
+                        <p><b>Score:</b> {player.score}</p>
+                        <hr/>
+                    </div>
+                </template>
+            </template>
+        </div>
+
+
+
+
+
+
+    </lightning-card>
+
+
+
+</template>

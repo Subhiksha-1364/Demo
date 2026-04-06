@@ -1,0 +1,58 @@
+<template>
+
+    <lightning-card title="Choose">
+        <div class='slds-p-around_medium'>
+            <p> Choose One</p>
+
+            <div>
+                <lightning-input type="checkbox" class ='ShopCheck' label="Shopping" onchange={handleShoppingChange}></lightning-input>
+
+            </div>
+            <div>
+                <lightning-input type="checkbox" class ='ReadCheck' label="Reading" onchange={handleReadingChange}></lightning-input>
+
+            </div>
+
+        </div>
+
+        <template lwc:if={isShopping}>
+
+            <lightning-card title="Shopping">
+                <div class='slds-p-around_medium'>
+                    <ul>
+                        <li><a href="https://www.amazon.in/">👝Amazon</a></li>
+                        <li> <a href="https://www.myntra.in/">👜Myntra</a></li>
+                        <li><a href="https://www.flipkart.in/">🧳Flipkart</a></li>
+                    </ul>
+                </div>
+
+            </lightning-card>
+
+        </template>
+
+        <template lwc:elseif={isReading}>
+
+            <lightning-card title="Reading">
+
+                <div class='slds-p-around_medium'>
+                     <ul>
+                        <li><a href="https://www.amazon.in/">👝Harry Potter</a></li>
+                        <li><a href="https://www.myntra.in/">👜Atomic habits</a></li>
+                        <li><a href="https://www.flipkart.in/">🧳Ikigai</a></li>  
+                    </ul>
+                </div>
+            </lightning-card>
+
+        </template>
+
+        <template lwc:else>
+
+            <h1 style="text-align: center;"> Nothing is  Choosed</h1>
+
+        </template>
+
+
+
+    </lightning-card>
+
+</template>

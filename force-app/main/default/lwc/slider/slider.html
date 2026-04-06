@@ -1,0 +1,19 @@
+<template>
+
+    <lightning-card>
+    
+    <div class='slds-m-around-medium box '>
+
+    <lightning-slider class='slide' label="Volume" size="medium" max='50' min ='1' value ={currentVal} onchange={handleSliderChange}></lightning-slider>
+
+
+    <c-child-slider child-val={currentVal}></c-child-slider>
+
+    </div>
+
+    </lightning-card>
+
+
+
+
+</template>

@@ -1,0 +1,35 @@
+:host{
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+.noTask{
+
+    background-color: beige;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: brown;
+    padding: 20px;
+    display: inline-block;
+
+}
+
+.ifTask
+{
+    background-color: beige;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: brown;
+    font-style: italic;
+     display: inline-block;
+   
+}
+.input
+{
+    font-style: italic;
+    font-weight: bold;
+    color: brown;
+    padding: 20px;
+}

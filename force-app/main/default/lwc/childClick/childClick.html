@@ -1,0 +1,23 @@
+<template>
+
+    <lightning-card title='Child'>
+        <div class='slds-grid slds-wrap slds-gutters slds-text-align_center'>
+            <template for:each={players} for:item='player'>
+
+                <div key={player.name} class='slds-col slds-size_1-of-3'>
+                   <h2> {player.name}</h2>
+                    <img src={player.img} width="120" style="border-radius:8px">
+                    <lightning-input type='checkbox'  data-name={player.name} onclick={handleCheck}></lightning-input>
+                </div>
+            </template>
+        </div>
+
+        <div class="slds-p-around_medium slds-m-around_medium">
+
+            <lightning-button label='Close' variant='destructive' onclick={handleClose}></lightning-button>
+
+        </div>
+
+    </lightning-card>
+
+</template>

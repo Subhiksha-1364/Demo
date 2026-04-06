@@ -1,0 +1,10 @@
+.BgdClrRed{
+    background-color: red;
+    font-weight: bold;
+    display: inline-block;
+}
+.BgdClrGrn{
+    background-color: green;  
+    font-weight: bold;
+    display: inline-block;
+}
